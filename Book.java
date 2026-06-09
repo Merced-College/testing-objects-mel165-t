@@ -1,6 +1,7 @@
 /*
 Melanie Alvarez Chavez
 06/08/2026
+Book class for my Book objects
 */
 
 
@@ -15,7 +16,7 @@ public class Book {
         title = "Untitled Book";
         pageCount = 0;
         price = 0.0;
-}
+    }   
     
     public Book(String title, int pageCount, double price) { // parameterized constructor
         this.title = title;
@@ -35,14 +36,27 @@ public class Book {
         return pageCount; 
     }
     public void setPageCount(int pageCount) { 
-        if (pageCount >= 0) this.pageCount = pageCount; 
+        //Prevents setting a negative page count
+        if (pageCount >= 0) {
+            this.pageCount = pageCount;
+        } 
+        else {
+        System.out.println("Warning: Page count cannot be negative! Value left unchanged.");
+        }
     }
+
 
     public double getPrice() { 
         return price; 
     }
     public void setPrice(double price) { 
-        if (price >= 0.0) this.price = price; 
+        //Ensures the price cannot be negative
+        if (price >= 0.0) {
+            this.price = price; 
+        }
+        else {
+        System.out.println("Warning: Price cannot be negative! Value left unchanged.");
+        }
     }
 
     @Override

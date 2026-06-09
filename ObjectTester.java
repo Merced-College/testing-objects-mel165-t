@@ -1,6 +1,7 @@
 /*
 Melanie Alvarez Chavez
 06/08/2026
+Object Testing class for my Dog and Book objects
 */
 
 public class ObjectTester {
@@ -52,18 +53,22 @@ public class ObjectTester {
         //making a default book object
         Book book1 = new Book();
         //making a book object with given data
+        //I added Barns&Nobles website price
         Book book2 = new Book("Flame in the mist", 402, 17.99);
         System.out.println("\n--- Testing My Custom Book Class ---");
         System.out.println("Default book: " + book1);
         System.out.println("Custom book: " + book2);
+        //Changed the price to the Target website price
         System.out.println("\nUpdating book2 details using setters...");
         book2.setPrice(15.29);
-        book2.setPageCount(-50); // This negative number will be blocked by our guard rule!
+        // testing what I stated in the README.md Q5
+        //This negative number will be blocked by the guard rule and a message will be left
+        book2.setPageCount(-50);
 
         System.out.println("New price via getter: $" + book2.getPrice());
         System.out.println("Final book2 status: " + book2);
-        //add something about your rating 
-
+        //added something about my personal rating 
+        System.out.println("Rating for \"" + book2.getTitle() + "\" is 5 out of 5!");
 
     }//end main
 

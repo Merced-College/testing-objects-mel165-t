@@ -1,6 +1,7 @@
 /*
 Melanie Alvarez Chavez
 06/08/2026
+Dog class for my Dog objects
 */
 
 public class Dog {
@@ -14,7 +15,7 @@ public class Dog {
         name = "Unknown";
         age = 0;
         breed = "Mixed";
-}
+    }
 
     public Dog(String name, int age, String breed) { // parameterized constructor
         this.name = name;
